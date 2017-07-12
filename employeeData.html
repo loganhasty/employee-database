@@ -1,55 +1,77 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-	<title>New York Times Search</title>
-	<link rel="stylesheet" href="assets/css/reset.css">
+	<meta charset="UTF-8">
+
+	<title>Employee Data Management</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="assets/css/style.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
+
+
 <body>
+
 	<div class="container">
+
 		<div class="jumbotron">
-			<h1 class="text-center">
-				<!--<span class="glyphicon glyphicon-search"></span>-->
-				<strong>Employee Data Manager</strong>
-			</h1>
-		</div>
-			<div class="panel panel-primary">
-				<div class="panel-heading">
-					<h3 class="panel-title">
-						<strong>Employees</strong>
-					</h3>
-				</div>
-				<div class="panel-body">
-					<form role="form">
-					  <div class="form-group">
-					    <label for="search">Employee Name:</label>
-					    <input type="text" class="form-control" id="employee-name">
-					  </div>
-					  <div class="form-group">
-					    <label for="pwd">How Many Records?</label>
-						<select class="form-control" id="numRecords">
-							<option value="1">1</option>
-							<option value="5" selected="">5</option>
-							<option value="10">10</option>
-						</select>			  
-					  </div>
-					  <div class="form-group">
-					    <label for="startYear">Start Year (Optional):</label>
-					    <input type="text" class="form-control" id="startYear">
-					  </div>
-					  <div class="form-group">
-					    <label for="endYear">End Year (Optional):</label>
-					    <input type="text" class="form-control" id="endYear">
-					  </div>
-					  <button type="submit" class="btn btn-success" id="runSearch">Search</button>
-  					  <button type="button" class="btn btn-primary" id="clearAll">Clear Results</button>
-					</form>
-				</div>
-			</div>
-	</div>
-<script src="app.js"></script>
-<script src="assets/javascript/script.js"></script>
+		      <h1 class="text-center">Employee Data Management</h1>		      	
+		</div><!--end jumbotron-->
+				
+		 <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Current Employees</h3>
+          </div><!--end panel-heading-->
+
+          <div class="panel-body"> 
+            <table class="table table-condensed">
+			 <tr>
+			    <th>Current Employees</th>
+			    <th>Role</th>
+			    <th>Start Date</th>
+			    <th>Months Worked</th>
+			    <th>Monthly Rate</th>
+			  </tr>
+			  
+			</table>
+          </div><!--end panel-body-->
+        </div><!--end panel-default-->
+
+			
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Add Employee</h3>
+          </div><!--end panel-heading-->
+
+          <div class="panel-body">           
+            <form role="form">
+              <div class="form-group">
+                <label for="name-input">Employee Name</label>
+                <input class="form-control" id="name-input" type="text">
+              </div>
+              <div class="form-group">
+                <label for="email-input">Role</label>
+                <input class="form-control" id="destination-input" type="text">
+              </div>
+              <div class="form-group">
+                <label for="age-input">Start Date (DD/MM/YY - ex: 01/01/89)</label>
+                <input class="form-control" id="time-input" type="number">
+              </div>
+              <div class="form-group">
+                <label for="comment-input">Monthly Rate</label>
+                <label class="form-control" id="frequency-input" type="number"></label>
+              </div>
+              <button class="btn btn-success" id="submit-train" type="submit">Submit</button>
+            </form>
+          </div><!--end panel-body-->
+        </div><!--end panel-default-->
+      
+	</div><!--end container-->
+	 
+	<script src="assets/javascript/app.js"></script>
+
 </body>
+
 </html>
